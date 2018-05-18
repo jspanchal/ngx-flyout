@@ -52,6 +52,7 @@ export class FlyoutComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this._renderUi();
+    this._enableAnimation();
   }
 
   ngOnChanges(changes): void {
@@ -131,6 +132,10 @@ export class FlyoutComponent implements OnInit, OnChanges {
     this._updateBackdropClassList();
     this._updateFlyoutClassList();
     this._updateFlyoutTransform();
+  }
+
+  _enableAnimation() {
+    this._defaultFlyoutClasses.push('animated');
   }
 
   onCloseButtonClick($event) {

@@ -18,7 +18,6 @@
   backface-visibility: hidden;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   will-change: transform;
-  transition: transform 300ms ease-in-out;
   &.left {
     top: 0;
     bottom: 0;
@@ -42,6 +41,9 @@
     right: 0;
     bottom: 0;
     width: 100%;
+  }
+  &.animated {
+    transition: transform 300ms ease-in-out;
   }
   &.open {}
 }
