@@ -1,0 +1,78 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+
+.flyout {
+  position: fixed;
+  background: #fff;
+  backface-visibility: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  transition: transform 300ms ease-in-out;
+  &.left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+  }
+  &.right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+  }
+  &.top {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  &.bottom {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  &.open {}
+}
+
+.close-btn-container {
+  text-align: right;
+  .close-btn {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 18px;
+      left: 6px;
+      right: 6px;
+      width: 24px;
+      height: 1px;
+      background-color: rgb(75, 69, 69);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+  &.hidden {
+    display: none;
+  }
+}

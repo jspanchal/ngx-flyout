@@ -1,0 +1,26 @@
+{
+  "name": "ngx-flyout",
+  "version": "0.0.1",
+  "description": "Angular Sidebar/Flyout Component.",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "author": "Jayesh Panchal",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular 6",
+    "sidebar",
+    "flyout",
+    "component"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}

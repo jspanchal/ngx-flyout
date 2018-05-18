@@ -1,0 +1,10 @@
+<div #backdrop (click)='onBackdropClick($event)'>
+</div>
+<div #flyout>
+  <div class="close-btn-container" [ngClass]="showCloseButton ? '' : 'hidden'">
+    <div class="close-btn" (click)='onCloseButtonClick($event)'></div>
+  </div>
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>

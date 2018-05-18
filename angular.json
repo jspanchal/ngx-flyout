@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "flyout": {
+      "root": "projects/flyout",
+      "sourceRoot": "projects/flyout/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/flyout/tsconfig.lib.json",
+            "project": "projects/flyout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/flyout/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/flyout/src/test.ts",
+            "tsConfig": "projects/flyout/tsconfig.spec.json",
+            "karmaConfig": "projects/flyout/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/flyout/tsconfig.lib.json",
+              "projects/flyout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-flyout"
