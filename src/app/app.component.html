@@ -1,7 +1,32 @@
-<ngx-flyout [(open)]="open">
-  <div>Hello</div>
-  <div>World</div>
+<ngx-flyout [(open)]="open" [position]="position" [showCloseButton]="showCloseButton" [showBackdrop]="showBackdrop" [hideOnBackdropClick]="hideOnBackdropClick">
+  <div class="cover-picture">
+  </div>
+  <div class="menu-container">
+    <ul>
+      <li>Menu 1</li>
+      <li>Menu 2</li>
+      <li>Menu 3</li>
+    </ul>
+  </div>
 </ngx-flyout>
 
-<button (click)="open = true">Show</button>
-<button (click)="open = false">Hide</button>
+<div class="main-container">
+  <ul>
+    <li (click)="open = !open">
+      <strong>open:</strong> {{open}}
+    </li>
+    <li (click)="togglePosition()">
+      <strong>position:</strong> {{position}}
+    </li>
+    <li (click)="showCloseButton = !showCloseButton">
+      <strong>showCloseButton:</strong> {{showCloseButton}}
+    </li>
+    <li (click)="showBackdrop = !showBackdrop">
+      <strong>showBackdrop:</strong> {{showBackdrop}}
+    </li>
+    <li (click)="hideOnBackdropClick = !hideOnBackdropClick">
+      <strong>hideOnBackdropClick:</strong> {{hideOnBackdropClick}}
+    </li>
+  </ul>
+
+</div>
