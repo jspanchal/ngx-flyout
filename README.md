@@ -1,27 +1,82 @@
-# NgxFlyout
+# ngx-flyout
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+[![NPM](https://nodei.co/npm/ngx-flyout.png)](https://www.npmjs.com/package/ngx-flyout)
 
-## Development server
+No drama Angular Sidebar/Flyout Component.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+```shell
+npm i ngx-flyout --save
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Changelog
 
-## Build
+See the [releases page](https://github.com/codetonics/ngx-flyout/releases) on GitHub.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add `FlyoutModule` to your app module:
 
-## Running end-to-end tests
+```typescript
+import { FlyoutModule } from 'ngx-flyout';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, FlyoutModule],
+  bootstrap: [AppComponent],
+})
+class AppModule {}
+```
 
-## Further help
+In your app component, simply use add a `<ngx-flyout>` wrapper, then place the content you want in your flyout within it.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+@Component({
+  selector: 'app',
+  template: `
+    <!-- Container for sidebar(s) + page content -->
+    <ngx-flyout [(open)]="openFlyout">
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+        </ul>
+    </ngx-flyout>
+
+    <button (click)="toggleSidebar">
+        Toggle Flyout
+    </button>
+  `
+})
+class AppComponent {
+  private openFlyout: boolean = false;
+
+  private toggleSidebar() {
+    this.openFlyout = !this.openFlyout;
+  }
+}
+```
+
+## Options
+
+### Inputs
+
+| Property name | Type | Default | Description |
+| ------------- | ---- | ------- | ----------- |
+| open | boolean | `false` | Controls the open state of the flyout. This should be two-way bound. |
+| position | `'left'`, `'right'`, `'top'`, `'bottom'` | `'right'` | What side the flyout should open. |
+| showCloseButton | `showCloseButton: boolean` | true | Controls visibility of close button. |
+| flyoutClasses | `flyoutClasses: string[]` | | Additional styling classes for flyout. |
+| showBackdrop | `showBackdrop: boolean` | true | Controls visiblity of backdrop. |
+| hideOnBackdropClick | `hideOnBackdropClick: boolean` | true | If clicking on backdrop closes the flyout or not.  |
+| backdropClasses | `backdropClasses: string[]` | | Additional styling classes for backdrop |
+
+#### Outputs
+
+| Property name | Callback arguments | Description |
+| ------------- | ------------------ | ----------- |
+| flyoutOpened | | Emitted when flyout is opened. |
+| flyoutClosed | | Emitted when flyout is closed. |
+| openChange | `open: boolean` | Emitted when `open` is modified. This allows to do "two-way binding" |
