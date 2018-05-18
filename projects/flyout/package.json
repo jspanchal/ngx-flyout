@@ -4,12 +4,12 @@
   "description": "Angular Sidebar/Flyout Component.",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/codetonics/ngx-flyout.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/codetonics/ngx-flyout/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/codetonics/ngx-flyout",
   "author": "Jayesh Panchal",
   "license": "MIT",
   "keywords": [
