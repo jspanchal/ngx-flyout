@@ -1,7 +1,7 @@
 {
   "name": "ngx-flyout",
-  "version": "0.0.1",
-  "description": "Angular Sidebar/Flyout Component.",
+  "version": "0.0.3",
+  "description": "Angular Sidebar/Flyout/Sidenav Component.",
   "repository": {
     "type": "git",
     "url": "https://github.com/codetonics/ngx-flyout.git"
@@ -17,6 +17,7 @@
     "angular 6",
     "sidebar",
     "flyout",
+    "Sidenav",
     "component"
   ],
   "peerDependencies": {
