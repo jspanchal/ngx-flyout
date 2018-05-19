@@ -1,5 +1,3 @@
-# ngx-flyout
-
 [demo](http://codetonics.com/ngx-flyout/demo)
 
 [![NPM](https://nodei.co/npm/ngx-flyout.png)](https://www.npmjs.com/package/ngx-flyout)
