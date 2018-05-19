@@ -1,6 +1,6 @@
 {
   "name": "ngx-flyout",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Angular Sidebar/Flyout/Sidenav Component.",
   "repository": {
     "type": "git",
@@ -9,8 +9,8 @@
   "bugs": {
     "url": "https://github.com/codetonics/ngx-flyout/issues"
   },
-  "homepage": "https://github.com/codetonics/ngx-flyout",
-  "author": "Jayesh Panchal",
+  "homepage": "http://codetonics.com/ngx-flyout",
+  "author": "Jayesh Panchal (jspanchal@ymail.com) [http://codetonics.com]",
   "license": "MIT",
   "keywords": [
     "angular",
