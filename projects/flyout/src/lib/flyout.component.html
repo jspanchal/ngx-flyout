@@ -4,7 +4,7 @@
   <div class="close-btn-container" [ngClass]="showCloseButton ? '' : 'hidden'">
     <div class="close-btn" (click)='onCloseButtonClick($event)'></div>
   </div>
-  <div>
+  <div class="flyout-content">
     <ng-content></ng-content>
   </div>
 </div>

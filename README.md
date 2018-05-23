@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/ngx-flyout.png)](https://www.npmjs.com/package/ngx-flyout)
 
-Angular Sidebar/Flyout/Sidenav Component without any drama.
+No Drama Sidebar/Flyout/Sidenav Component For Angular 6 and greater.
 
 ## Installation
 
